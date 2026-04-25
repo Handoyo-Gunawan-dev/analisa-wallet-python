@@ -12,15 +12,31 @@ Proyek berbasis Python untuk melakukan audit dan analisa data keuangan pribadi d
 
 ## 🛠️ Cara Penggunaan
 
-### 1. Persiapan
-Pastikan kamu sudah menginstall Python di komputer. Kemudian, install library yang dibutuhkan:
+
+
+## 1. Persiapan
+
+Pastikan Python sudah terinstall di komputer.
+
+Install library yang dibutuhkan:
+
 ```bash
 pip install streamlit pandas
+```
 
-2. Siapkan Data
-Letakkan file riwayat transaksi kamu dalam format .csv ke dalam folder proyek.
-(Tips: Buka Etherscan/Basescan/Bscscan, lalu scroll ke bawah dan klik Export CSV pada riwayat transaksi walletmu).
+## 2. Siapkan Data
 
-3. Jalankan Aplikasi
-Buka terminal/CMD di folder proyek, lalu jalankan perintah:
+* Letakkan file riwayat transaksi dalam format `.csv` ke dalam folder proyek.
+* Cara mendapatkan file:
+
+  * Buka Etherscan / Basescan / Bscscan
+  * Scroll ke bawah
+  * Klik **Export CSV** pada riwayat transaksi wallet
+
+## 3. Jalankan Aplikasi
+
+Buka terminal / CMD di folder proyek, lalu jalankan:
+
+```bash
 python -m streamlit run app.py
+```

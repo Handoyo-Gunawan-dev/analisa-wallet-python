@@ -1,4 +1,23 @@
+# Python - Folder hasil eksekusi (sampah teknis)
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
 
+# Data & Log - Mencegah kebocoran data
 *.csv
+*.xlsx
+*.json
+*.log
+*.sqlite
+
+# OS - File sistem yang tidak perlu
+.DS_Store
+Thumbs.db
+
+# VS Code - Folder setting lokal
+.vscode/

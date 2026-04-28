@@ -29,7 +29,7 @@ pip install streamlit pandas
 * Letakkan file riwayat transaksi dalam format `.csv` ke dalam folder proyek.
 * Cara mendapatkan file:
 
-  * Buka Etherscan / Basescan / Bscscan
+  * Buka Etherscan / Basescan / Arbiscan  / Optimistic
   * Scroll ke bawah
   * Klik **Export CSV** pada riwayat transaksi wallet
 

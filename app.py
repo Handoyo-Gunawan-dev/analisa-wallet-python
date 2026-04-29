@@ -22,9 +22,10 @@ if file_terpilih is not None:
 
     # Menampilkan angka-angka penting dalam kolom agar rapi
     col1, col2, col3 = st.columns(3)
+    coin= hasil["coin"]
     col1.metric("Total Transaction", hasil['total_transaksi'])
-    col2.metric("Total In (ETH)", f"{hasil['total_masuk_eth']:.4f}")
-    col3.metric("Total Out (ETH)", f"{hasil['total_keluar_eth']:.4f}")
+    col2.metric(f"Total In ({coin})", f"{hasil['total_masuk_eth']:.4f}")
+    col3.metric(f"Total Out ({coin})", f"{hasil['total_keluar_eth']:.4f}")
 
     st.subheader("Transaction Insights")
     import datetime

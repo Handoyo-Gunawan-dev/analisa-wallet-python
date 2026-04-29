@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import datetime
 from analisa import analisa_wallet # Mengambil fungsi yang sudah kamu buat
 
 # 1. Judul Aplikasi
@@ -28,13 +29,17 @@ if file_terpilih is not None:
     col3.metric(f"Total Out ({coin})", f"{hasil['total_keluar_eth']:.4f}")
 
     st.subheader("Transaction Insights")
-    import datetime
+    
     jam_obj=datetime.time(hour=int(hasil["jam_terpadat"]))
     jam_en=jam_obj.strftime("%I:%M %p")
     st.write(F"**Busiest hours:** {jam_en}")
     st.write(f"**Most Methods:** {hasil['method_terbanyak']} ({hasil['persen_method_terbanyak']}%)")
     st.write(f"**Percentage of Value IN Empty :** {hasil['persen_value_in_kosong']}%")
-    st.write(f"**Average Fee (when Value IN is 0):** {hasil['rata_fee_tanpa_value_in']:.9f} ETH")
+    fee= hasil['rata_fee_tanpa_value_in']
+    if pd.notna(fee):
+        st.write(f"Average Fee ( when Value IN IS 0):  {fee:.9f} {coin}")
+    else:
+        st.write("**Average Fee:** No data")
 
     # 5. Menampilkan Data Tabel
     st.subheader("5 Largest Outgoing Transactions")
